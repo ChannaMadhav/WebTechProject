@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="p1_react.css">
+  </head>
+  <body style="background-image: url('/background-image.png');">
+    <header id="h_1" class="banner">
+      <!-- XYZ -->
+      <center>
+          <img src="/MicrosoftTeams-image.png" alt="">
+          <a href="/"> <button style="position:relative;left:25em;bottom:2em;">HOME</button></a>
+        </center>
+        <br>
+      </header>
+      
+      <div id="root"></div>
+      <br><br><br>
+      
+    <footer>
+      <div class="footer">
+          <ul class="f_list 1" id="rr">
+
+              <li><a href="/about">About us</a></li>
+             <li> <a href="#">FAQ</a></li>
+          <li><a href="/contactus">Contact Us</a></li>
+          </ul>
+          
+      
+
+          <ul class="f_list 2" id="social">
+            <li><a href="#" target="_blank"><img src="/Instagram_logo_2016.svg.png" style="height: 2em; width:2em;" alt="insta"></a></li>
+            <li><a href="#" target="_blank"><img src="/Facebook-logo.png" style="height: 2em; width:2em;" alt="face"></a></li>
+            <li><a href="#" target="_blank"><img src="/Twitter-Logo.png" style="height: 2em; width:3em;" alt="twit"></a></li>
+          </ul>
+      </div>
+      <br>
+      <hr width="70%">
+      <center>copyrights</center>
+      <br><br>
+  </footer>
+    <script type="text/babel">
+      class SignIn extends React.Component
+      {
+          constructor(props)
+          {
+              super(props);
+          }
+          render()
+          {
+              return(
+                  <form method="post" action="/geodata">
+                    <p ><h2>SIGN IN</h2></p>
+                    <p>Enter username: <br/> <input type="text" name="username"/></p>
+                    <p>Enter password: <br/> <input type="password" name="password" id=""/></p>
+                    <br/>
+                    <div style={{display:"flex"}}>
+                        <button type="submit" style={{marginRight:"2em"}} name="signIn" value="signin">SIGN IN</button>
+                        <button type="submit" name="signIn" value="signup">SIGN UP</button>
+                    </div>
+                  </form>
+              )
+          }
+      }
+
+       ReactDOM.render(<SignIn />, document.getElementById('root'))
+    </script>
+
+  </body>
+</html>

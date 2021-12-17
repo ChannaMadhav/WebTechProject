@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "alert": "^5.0.10",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.1",
+    "popup": "^0.0.3",
+    "popups": "^1.1.3"
+  }
+}

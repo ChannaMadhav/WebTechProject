@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="react_about.css">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+</head>
+
+<body>
+
+  
+
+
+  <div class="about-section">
+    <h1>About Us</h1>
+    <p>All About our Team.</p>
+    <p><h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif;">The Charity Guys !!!</h1></p>
+  </div>
+
+  <h2 style="text-align:center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Our Team</h2>
+  <div class="row">
+  <div class="column">
+  <div id="root"></div>
+
+  <footer>
+    <div class="footer">
+      <ul class="f_list 1" id="rr">
+
+          <li><a href="#">About us</a></li>
+          <li> <a href="#">FAQ</a></li>
+          <li><a href="/contactus">Contact Us</a></li>
+      </ul>
+
+
+
+      <ul class="f_list 2" id="social">
+          <li><a href="https://www.instagram.com/prabhu_16502/?hl=en" target="_blank"><img
+                      src="/Instagram_logo_2016.svg.png" style="height: 2em; width:2em;" alt="insta"></a></li>
+          <li><a href="https://www.facebook.com/bangtan.official" target="_blank"><img src="/Facebook-logo.png"
+                      style="height: 2em; width:2em;" alt="face"></a></li>
+          <li><a href="https://twitter.com/search?q=%23jungkook&lang=en" target="_blank"><img
+                      src="/Twitter-Logo.png" style="height: 2em; width:3em;" alt="twit"></a></li>
+      </ul>
+  </div>
+  <br>
+  <hr width="70%">
+  <center>copyrights</center>
+  <br><br>
+  </footer>
+
+  <script type="text/babel">
+      
+
+      class Card extends React.Component
+      {
+        constructor(props)
+        {
+          super(props);
+        }
+        render()
+        {
+          return(
+            <div className="grid-item">
+            <img src={this.props.img_location} alt="Jane" style={{width:"100%"}}/>
+              <p><h2 style={{fontFamily:'Quicksand'}}>{this.props.children}</h2></p>
+              <p className="title">{this.props.position}</p>
+              <p>{this.props.mail}</p>
+             
+            </div>
+          )
+        }
+
+      }    
+
+      class CardRender extends React.Component {
+            constructor(props) {
+                super(props);
+            }
+
+            render() {
+                
+                return (
+
+                    <div className="grid-container" id="container1_body">
+
+                        <Card img_location="./1.jpg" position="Leader" mail="alanpaul303@gmail.com">Alan S Paul</Card>
+                        <Card img_location="./2.jpg" position="Director" mail="Basavaprabu@gmail.com">Basavaprabu G Kiragi</Card>
+                        <Card img_location="./3.jpg" position="Designer" mail="chaitanya@gmail.com">Chaitanya Madhav R</Card>
+                    </div>
+                );
+            }
+        };
+
+        ReactDOM.render(<CardRender/>, document.getElementById('root'))
+  </script>
+
+</body>
+
+</html>

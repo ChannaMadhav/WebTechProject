@@ -1,0 +1,109 @@
+body{
+    box-sizing: border-box;
+}
+
+header{
+    
+    position: relative;
+    min-width: 350px;
+    background-color: #13265a;
+}
+
+header img{
+    height: 5em;
+    width:5em;
+    align-items: center;
+    margin-top: 1em;;
+}
+header button{
+    padding:0.8em;
+    border-radius: 8px;
+}
+
+
+header button:hover{
+    color:white;
+    background-color:black;
+    border:gold solid;
+    
+}
+#root{
+    width: 400px;
+    height:300px;
+    margin: 5% auto 0% auto;
+    background-color: #1995AD;
+    border: #A1D6E2 20px solid;
+    border-radius: 20%;
+}
+
+#root form
+{
+    padding:10px 0px 10px 35px;
+    color:#F1F1F2;
+    font-family: Quicksand;
+
+    
+}
+
+#root form input{
+    width:50%;
+    border-radius: 28px;
+}
+
+#root form button{
+    background-color: #004445;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#root form button:hover{
+    border: 2px solid #BCBABE;
+    color:goldenrod;
+}
+
+#root form input:focus{
+    /* background-color: #4CB5F5; */
+    box-shadow: 4px 4px 6px #171616;
+    border-color: whitesmoke;
+}
+
+footer{
+    min-width: 100%;
+    
+    background-color: #13265a;
+}
+
+footer div.footer{
+    display: flex;
+    justify-content:space-between ;
+
+}
+
+footer div.footer .f_list{
+    display: flex;
+
+    list-style-type: none;
+    justify-content: space-evenly;
+    padding:0% auto 0% auto;
+    
+
+}
+footer #rr li:hover{
+    border-bottom: springgreen solid;
+    background-color:#3b4f86;
+
+}
+
+
+footer .f_list li{
+    margin: 0% 2%;
+}
+
+footer .f_list a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+footer center{
+    color:#fff;
+}

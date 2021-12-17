@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="contactus.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="body" style="background-color: black;">
+    <div style="width: 50%;height: 100%;margin-left:auto;margin-right: auto;margin-top:350px;background-color: black;" id="root">
+
+    </div>
+</body>
+<script type="text/babel">
+    class Container extends React.Component
+      {
+        constructor(props)
+        {
+          super(props);
+        }
+        render()
+        {
+          return(
+            <div class="container">
+                <div class="content">
+                    <div class="right-side">
+                        <div class="topic-text">Send us a message</div>
+                        <p>If you have any queries related to our charity organisation/website, please write to us.</p>
+                        <form action="" method="">
+                            <div class="input-box">
+                                <input type="text" placeholder="Enter your name"/>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Enter your email"/>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Write message here"/><br/>
+                            </div>
+                            <button type="submit">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          )
+        }
+    }    
+    ReactDOM.render(<Container/>, document.getElementById('root'))
+
+</script>
+</html>
